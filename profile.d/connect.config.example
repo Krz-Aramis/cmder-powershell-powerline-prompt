@@ -1,0 +1,30 @@
+{
+    "profiles":[
+        {
+            "name": "default",
+            "_name_comment": "name of this profile. If only one is used, the name must be 'default'.",
+            "type": "pki",
+            "_type_comment": "desired authentication type. Currently only Public/Private (pki) or password are supported.",
+            "specs": {
+                "username": "YourUserName",
+                "_username_comment": "the name of the user with respect to the current profile.",
+                "data": "C:\\users\\YoutUserName\\.ssh\\id_rsa",
+                "_data_comment": "Full path to the OpenSSH private key file associated with the above user."
+            },
+            "_specs_comment": "the user data to use to perform the authentication."
+        },
+        {
+            "name":"less_secure",
+            "_name_comment": "name of this profile. If only one is used, the name must be 'default'.",
+            "type": "password",
+            "_type_comment": "desired authentication type. Currently only Public/Private (pki) or password are supported.",
+            "specs": {
+                "username": "AnotherName",
+                "_username_comment": "the name of the user with respect to the current profile.",
+                "data": "AvoidStoringPassowrdInPlainTextFiles",
+                "_data_comment": "password to use for the above user. This method is far less secure especially since this is a plain text file!"
+            },
+            "_specs_comment": "the user data to use to perform the authentication."
+        }
+    ]
+}
